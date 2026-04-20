@@ -17,11 +17,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { trackEvent } from "@/lib/analytics";
 
 const LINKS = {
-  wishlist: "https://store.steampowered.com/",
-  buy: "https://store.steampowered.com/",
-  discord: "https://discord.com/",
-  newsletter: "https://mailchi.mp/",
-  trailer: "https://www.youtube.com/embed/IQ2fQx9Hf8A?si=w8ag6Fc8u0Y8M9eU",
+  site: "https://babel-lexicon-war.vercel.app/",
 };
 
 const features = [
@@ -89,24 +85,23 @@ export default function Home() {
             <div className="flex flex-wrap gap-3">
               <a
                 className={buttonVariants({ size: "lg", className: "bg-cyan-300 text-zinc-900 hover:bg-cyan-200" })}
-                href={LINKS.wishlist}
+                href={LINKS.site}
                 target="_blank"
                 rel="noreferrer"
-                onClick={() => trackEvent("cta_click", { location: "hero", cta: "wishlist" })}
+                onClick={() => trackEvent("cta_click", { location: "hero", cta: "sitio_disponible" })}
               >
-                Wishlist en Steam
+                Ver sitio disponible
               </a>
-              <a
+              <span
                 className={buttonVariants({
                   size: "lg",
                   variant: "outline",
-                  className: "border-zinc-600 bg-zinc-900/40 text-zinc-100 hover:bg-zinc-800",
+                  className: "cursor-not-allowed border-zinc-700 bg-zinc-900/30 text-zinc-400 opacity-70",
                 })}
-                href="#trailer"
-                onClick={() => trackEvent("cta_click", { location: "hero", cta: "trailer_anchor" })}
+                aria-disabled="true"
               >
-                Ver trailer
-              </a>
+                Wishlist en Steam (Proximamente)
+              </span>
             </div>
           </div>
 
@@ -140,16 +135,12 @@ export default function Home() {
         </section>
 
         <section id="trailer" className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-          <div className="overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-950/70 shadow-2xl shadow-cyan-950/30">
-            <iframe
-              className="aspect-video w-full"
-              src={LINKS.trailer}
-              title="BABEL Lexicon War trailer"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-            />
+          <div className="grid aspect-video place-items-center overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-950/70 p-6 text-center shadow-2xl shadow-cyan-950/30">
+            <div className="space-y-2">
+              <p className="text-sm uppercase tracking-[0.14em] text-zinc-400">Trailer</p>
+              <p className="text-2xl font-semibold text-zinc-100">Proximamente</p>
+              <p className="text-zinc-400">Estamos preparando el primer trailer oficial.</p>
+            </div>
           </div>
           <Card className="border-zinc-800 bg-zinc-900/60">
             <CardHeader>
@@ -163,25 +154,22 @@ export default function Home() {
               <div className="flex flex-wrap gap-3">
                 <a
                   className={buttonVariants({ className: "bg-cyan-300 text-zinc-900 hover:bg-cyan-200" })}
-                  href={LINKS.trailer}
+                  href={LINKS.site}
                   target="_blank"
                   rel="noreferrer"
-                  onClick={() => trackEvent("cta_click", { location: "trailer", cta: "youtube" })}
+                  onClick={() => trackEvent("cta_click", { location: "trailer", cta: "sitio_disponible" })}
                 >
-                  Ver en YouTube
+                  Ir al sitio disponible
                 </a>
-                <a
+                <span
                   className={buttonVariants({
                     variant: "outline",
-                    className: "border-zinc-600 bg-zinc-900/40 text-zinc-100 hover:bg-zinc-800",
+                    className: "cursor-not-allowed border-zinc-700 bg-zinc-900/30 text-zinc-400 opacity-70",
                   })}
-                  href={LINKS.wishlist}
-                  target="_blank"
-                  rel="noreferrer"
-                  onClick={() => trackEvent("cta_click", { location: "trailer", cta: "wishlist" })}
+                  aria-disabled="true"
                 >
-                  Ir a wishlist
-                </a>
+                  YouTube (Proximamente)
+                </span>
               </div>
             </CardContent>
           </Card>
@@ -310,34 +298,28 @@ export default function Home() {
             <div className="flex flex-wrap gap-3">
               <a
                 className={buttonVariants({ className: "bg-cyan-300 text-zinc-900 hover:bg-cyan-200" })}
-                href={LINKS.buy}
+                href={LINKS.site}
                 target="_blank"
                 rel="noreferrer"
-                onClick={() => trackEvent("cta_click", { location: "final", cta: "buy" })}
+                onClick={() => trackEvent("cta_click", { location: "final", cta: "sitio_disponible" })}
               >
-                Comprar al lanzamiento
+                Ver sitio disponible
               </a>
-              <a
+              <span
                 className={buttonVariants({ variant: "secondary", className: "bg-zinc-200 text-zinc-900 hover:bg-zinc-100" })}
-                href={LINKS.discord}
-                target="_blank"
-                rel="noreferrer"
-                onClick={() => trackEvent("cta_click", { location: "final", cta: "discord" })}
+                aria-disabled="true"
               >
-                Unirme a Discord
-              </a>
-              <a
+                Discord (Proximamente)
+              </span>
+              <span
                 className={buttonVariants({
                   variant: "outline",
-                  className: "border-zinc-600 bg-zinc-900/40 text-zinc-100 hover:bg-zinc-800",
+                  className: "cursor-not-allowed border-zinc-700 bg-zinc-900/30 text-zinc-400 opacity-70",
                 })}
-                href={LINKS.newsletter}
-                target="_blank"
-                rel="noreferrer"
-                onClick={() => trackEvent("cta_click", { location: "final", cta: "newsletter" })}
+                aria-disabled="true"
               >
-                Newsletter
-              </a>
+                Newsletter (Proximamente)
+              </span>
             </div>
           </div>
         </section>
