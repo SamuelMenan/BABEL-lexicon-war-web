@@ -6,7 +6,6 @@ import {
   Keyboard,
   Orbit,
   Radar,
-  Rocket,
   ScanSearch,
 } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -84,7 +83,7 @@ export default function Home() {
             </p>
 
             <p className="max-w-xl rounded-md border-l-2 border-cyan-300/60 bg-zinc-900/70 px-4 py-3 text-sm italic text-zinc-300">
-              "Las palabras no se acaban. Solo cambian de mano."
+              &quot;Las palabras no se acaban. Solo cambian de mano.&quot;
             </p>
 
             <div className="flex flex-wrap gap-3">
