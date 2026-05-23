@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   title: "BABEL: Lexicon War | Landing",
   description:
     "Landing oficial de BABEL: Lexicon War. Shooter tipografico donde escribir es combatir.",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
