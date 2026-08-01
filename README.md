@@ -1,4 +1,4 @@
-testing lol
+testing and sent from iphone 
 # BABEL: Lexicon War Landing
 
 Landing comercial de BABEL: Lexicon War construida con Next.js (App Router), Tailwind CSS v4 y shadcn/ui.
