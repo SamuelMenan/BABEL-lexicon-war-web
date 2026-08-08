@@ -1,19 +1,5 @@
 "use client";
 
-import {
-  Activity,
-  Crosshair,
-  Gauge,
-  Keyboard,
-  Orbit,
-  Radar,
-  ScanSearch,
-  Shield,
-  Sparkles,
-  Swords,
-  Timer,
-  Zap,
-} from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
@@ -21,6 +7,20 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { trackEvent } from "@/lib/analytics";
+import {
+    Activity,
+    Crosshair,
+    Gauge,
+    Keyboard,
+    Orbit,
+    Radar,
+    ScanSearch,
+    Shield,
+    Sparkles,
+    Swords,
+    Timer,
+    Zap,
+} from "lucide-react";
 
 const LINKS = {
   site: "https://babel-lexicon-war.vercel.app/",
@@ -164,7 +164,7 @@ export default function Home() {
               Enjambre Lexical detectado
             </p>
 
-            <h1 className="text-balance text-4xl font-semibold leading-[1.04] text-zinc-100 sm:text-5xl lg:text-6xl">
+            <h1 className="rainbow-title text-balance text-4xl font-semibold leading-[1.04] sm:text-5xl lg:text-6xl">
               BABEL: Lexicon War
             </h1>
 

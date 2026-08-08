@@ -160,6 +160,39 @@
   }
 }
 
+.rainbow-title {
+  color: transparent;
+  background: linear-gradient(
+    90deg,
+    #ff4d6d 0%,
+    #ff8c42 14%,
+    #ffd166 28%,
+    #7ee787 42%,
+    #4cc9f0 58%,
+    #7c4dff 72%,
+    #ff5fd2 86%,
+    #ff4d6d 100%
+  );
+  background-size: 200% 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbowShift 4.5s linear infinite;
+  text-shadow: 0 0 22px rgba(255, 255, 255, 0.08);
+}
+
+@keyframes rainbowShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 @media (max-width: 640px) {
   .babel-nebula {
     height: 380px;
